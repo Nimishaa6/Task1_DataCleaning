@@ -1,0 +1,21 @@
+import pandas as pd
+
+data = {
+    'PatientID':[1,2,3,4,5,6,7,8],
+    'Gender':['F','M','F','F','M','F','M','F'],
+    'Age':[65,21,34,None,58,42,29,37],
+    'ScheduledDay':['2020-04-29T18:38:08Z','2020-04-29T16:08:27Z','2020-04-29T16:19:04Z','2020-04-29T16:19:04Z','2020-04-29T16:26:34Z','2020-04-29T16:40:06Z','2020-04-29T17:02:17Z','2020-04-29T17:16:06Z'],
+    'AppointmentDay':['2020-05-15','2020-05-15','2020-05-15','2020-05-15','2020-05-15','2020-05-15','2020-05-15','2020-05-15'],
+    'Neighbourhood':['JARDIM CAMBURI','ANDORINHAS','GOIABEIRAS','ITARARÉ','PIATÃ','CARATOÍRA','ILHAS OCEÂNICAS DE TRINDADE','JABOUR'],
+    'Scholarship':[0,0,0,1,0,0,0,1],
+    'Hypertension':[1,0,0,0,1,0,0,0],
+    'Diabetes':[0,0,0,0,1,0,0,0],
+    'Alcoholism':[0,0,0,0,0,0,0,0],
+    'Handcap':[0,0,0,0,0,0,0,0],
+    'SMS_received':[0,0,0,0,1,0,0,0],
+    'No-show':['No','Yes','No','No','Yes','No','No','Yes']
+}
+
+df = pd.DataFrame(data)
+df.to_csv("original_dataset.csv", index=False)
+print("original_dataset.csv saved successfully!")
